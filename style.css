@@ -129,7 +129,7 @@ img {
 }
 
 /* Mobile adjustments */
-@media (max-width: 600px) {
+@media (max-width: 900px) {
     header {
         flex-direction: column;
         align-items: center;
@@ -151,7 +151,7 @@ img {
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
     .blog-list {
         width: 90%;          /* sužavamo kontejner da bude usko i centralno */
         margin: 30px auto 0 auto; /* centriranje sa marginama */
