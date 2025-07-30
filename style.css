@@ -113,3 +113,26 @@ footer a:hover {
         padding: 6px 12px;
     }
 }
+p {
+    max-width: 600px;
+    margin: auto;
+    text-align: justify;
+    font-size: 18px;
+}
+
+.kontakt-info {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+.kontakt-info a {
+    color: #4fc3f7;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.kontakt-info a:hover {
+    text-decoration: underline;
+}
