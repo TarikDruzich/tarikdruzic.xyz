@@ -160,3 +160,13 @@ p {
 .kontakt-info a:hover {
     text-decoration: underline;
 }
+
+/* Globalni stil za sve slike */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
