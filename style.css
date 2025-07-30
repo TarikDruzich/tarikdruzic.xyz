@@ -13,8 +13,8 @@ body {
     line-height: 1.6;
     font-size: 18px;
     padding-bottom: 120px;
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: 20px; /* MOD: malo više paddinga sa strane */
+    padding-right: 20px; /* MOD: malo više paddinga sa strane */
 }
 
 /* Headings */
@@ -65,33 +65,43 @@ p {
 
 /* Footer */
 footer {
-    background-color: #111;
-    color: #aaa;
+    background-color: #222; /* MOD: tamnija pozadina da se istakne */
+    color: #ddd;           /* MOD: svjetlija boja teksta */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    padding: 20px 0;
+    padding: 25px 0;
     position: fixed;
     width: 100%;
     bottom: 0;
-    border-top: 1px solid #333;
+    border-top: 2px solid #4aa3df; /* MOD: istaknuti rub */
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.7); /* MOD: blaga sjena za dubinu */
+    z-index: 1000;
 }
 
 footer a {
     color: #4aa3df;
     text-decoration: none;
-    font-size: 1em;
+    font-size: 1.1em; /* MOD: malo veći font */
+    padding: 6px 12px; /* MOD: veći klikabilni prostor */
+    border-radius: 4px; /* MOD: blago zaobljeni uglovi */
+    transition: background-color 0.3s, color 0.3s;
 }
 
-footer a:hover {
+footer a:hover, footer a:focus {
     text-decoration: underline;
+    background-color: #4aa3df; /* MOD: pozadina na hover */
+    color: #1e1e1e; /* MOD: kontrastna boja teksta */
+    outline: none;
 }
 
 /* Mobile adjustments */
 @media (max-width: 600px) {
     body {
-        font-size: 16px;
+        font-size: 15px; /* MOD: manji font */
+        padding-left: 15px; /* MOD: manje paddinga */
+        padding-right: 15px; /* MOD: manje paddinga */
     }
 
     h1 {
@@ -105,7 +115,20 @@ footer a:hover {
     footer {
         flex-direction: column;
         align-items: center;
-        gap: 10px;
+        gap: 12px;
+        padding: 20px 0;
+        position: fixed;
+        bottom: 0;
+        border-top: 2px solid #4aa3df;
+        box-shadow: 0 -2px 15px rgba(0,0,0,0.8);
+    }
+
+    footer a {
+        font-size: 1.2em; /* MOD: veći font na mobitelu za lakše tapkanje */
+        padding: 12px 20px; /* MOD: veći klikabilni prostor */
+        width: 80%; /* MOD: dugmad šira */
+        text-align: center;
+        border-radius: 8px;
     }
 
     .blog-list a {
@@ -113,6 +136,7 @@ footer a:hover {
         padding: 6px 12px;
     }
 }
+
 p {
     max-width: 600px;
     margin: auto;
