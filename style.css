@@ -130,38 +130,40 @@ img {
 
 /* Mobile adjustments */
 @media (max-width: 600px) {
-    body {
-        font-size: 15px;
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-
-    h1 {
-        font-size: 1.8em;
-    }
-
-    h2 {
-        font-size: 1.4em;
-    }
-
     header {
         flex-direction: column;
         align-items: center;
-        gap: 12px;
-        padding: 20px 0;
+        gap: 8px;            /* Smanjen razmak između linkova */
+        padding: 10px 0;     /* Smanjen padding gore-dole */
+    }
+
+    header .nav-links {
+        gap: 12px;           /* Manji razmak između linkova */
     }
 
     header .nav-links a {
-        font-size: 1.2em;
-        padding: 10px;
-        margin: 6px 0;
-        width: 80%;
+        font-size: 1em;      /* Malo manji font */
+        padding: 8px 12px;   /* Manji padding unutar linkova */
+        margin: 4px 0;       /* Smanjeni margini */
+        width: auto;         /* Nema širenja na 80% */
         text-align: center;
-        border-radius: 8px;
+        border-radius: 6px;
+    }
+}
+
+@media (max-width: 600px) {
+    .blog-list {
+        width: 90%;          /* sužavamo kontejner da bude usko i centralno */
+        margin: 30px auto 0 auto; /* centriranje sa marginama */
+        align-items: center; /* centra linkove */
     }
 
     .blog-list a {
-        font-size: 1em;
-        padding: 6px 12px;
+        display: block;      /* da linkovi zauzmu punu širinu */
+        text-align: center;  /* tekst centriran */
+        padding: 10px 0;     /* vertikalni padding za lakše tapkanje */
+        font-size: 1.1em;    /* malo veći font za bolju čitljivost */
+        max-width: 400px;    /* da ne budu preširoki na većim mobitelima */
+        margin: 0 auto;      /* centriranje svakog linka */
     }
 }
